@@ -1,6 +1,8 @@
 import random
 
 print("Welcome to Rock Paper Scissors!")
+
+
 player_score = 0
 computer_score = 0
 
@@ -11,9 +13,12 @@ while True:
     if player_move not in ['rock', 'paper', 'scissors']:
         print("Choose anything else")
         continue
+
+    
     computer_move = random.choice(['rock', 'paper', 'scissors'])
     print("Computer chose:", computer_move)
 
+    
     if player_move == computer_move:
         print("It's a tie!")
     elif (player_move == 'rock' and computer_move == 'scissors') or \
@@ -24,9 +29,13 @@ while True:
     else:
         print("Computer wins!")
         computer_score += 1
+
+    
     print("Score -> You:", player_score, "Computer:", computer_score)
 
+    
     play_again = input("Do you want to play again? (yes/no): ").lower()
     if play_again != 'yes':
         print("Thanks for playing!")
         break
+
